@@ -2,7 +2,7 @@ var btn = document.getElementsByClassName("btn");
 var banner = document.getElementById("banner");
 
 btn[0].onclick = function() {
-    banner.src = "images/pic1.jpg";
+    banner.src = "images/pic3.jpg";
     animation();
     this.classList.add("active");
 }
@@ -14,7 +14,7 @@ btn[1].onclick = function() {
 }
 
 btn[2].onclick = function() {
-    banner.src = "images/pic3.jpg";
+    banner.src = "images/pic1.jpg";
     animation();
     this.classList.add("active");
 }
