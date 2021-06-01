@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: blanchedalmond;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.container nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    flex: 1;
+    top: 20px;
+    left: 50px;
+}
+
+.logo .bar {
+    width: 80px;
+    height: 7px;
+    background-color: rgb(250, 50, 50);
+    transition: 0.6s;
+}
+
+.logo:hover .bar {
+    width: 195px;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.logo p {
+    line-height: 2px;
+}
+
+.container nav #tabs {
+    position: relative;
+    display: flex;
+    top: 20px;
+    right: 30px;
+}
+
+.container nav #tabs li {
+    list-style: none;
+    margin: 15px;
+}
+
+.container nav #tabs li a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.container nav #tabs li:hover a {
+    border-bottom: 2px solid rgb(247, 42, 42);
+    border-width: 100%;
+}
+
+#menu-btn {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    margin: 10px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#menu-btn:hover {
+    width: 38px;
+}
+
+.row {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.col-1,
+.col-2 {
+    flex-basis: 50%;
+    overflow: hidden;
+}
+
+.col-1 {
+    padding: 8% 5%;
+    position: relative;
+}
+
+.col-1 h1 {
+    font-size: 50px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.col-1 p {
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+    line-height: 22px;
+    margin: 15px 0px 30px;
+}
+
+.col-1 #dot-btns {
+    position: absolute;
+    bottom: 30px;
+}
+
+.col-1 #dot-btns li {
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: grey;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.col-1 #dot-btns .active {
+    background: black;
+}
+
+.col-2 img {
+    width: 100%;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: black;
+    color: blanchedalmond;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+button:hover {
+    background-color: rgb(247, 42, 42);
+    font-weight: 800;
+}
+
+.zoom {
+    animation: zoomout 0.8s linear 1;
+}
+
+@keyframes zoomout {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
