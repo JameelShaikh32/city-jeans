@@ -24,6 +24,9 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Contact</a></li>
+                <div class="close-menu" onclick="closeMenu()">
+                    Close
+                </div>
             </ul>
             <img src="images/menu.png" id="menu-btn">
         </nav>
@@ -36,19 +39,27 @@
                 </p>
                 <button>Explore</button>
 
-                <ul id="dot-btns">
-                    <li class="btn active"></li>
+                <ul id="col1-dot-btns">
+                    <li class="btn active1"></li>
                     <li class="btn"></li>
                     <li class="btn"></li>
                 </ul>
             </div>
             <div class="col-2">
                 <img src="images/pic3.jpg" alt="banners" id="banner">
+                <ul id="col2-dot-btns">
+                    <li class="dot active2"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/col1-img-btn.js"></script>
+    <script type="text/javascript" src="js/col2-img-btn.js"></script>
+    <script type="text/javascript" src="js/menu-btn.js"></script>
+
 </body>
 
 </html>

@@ -24,7 +24,6 @@
     flex: 1;
     top: 20px;
     left: 50px;
-    height: 80px;
 }
 
 .logo .bar {
@@ -45,6 +44,7 @@
 
 .logo p {
     line-height: 2px;
+    color: #333;
 }
 
 .container nav #tabs {
@@ -52,6 +52,7 @@
     display: flex;
     top: 20px;
     right: 30px;
+    transition: 0.8s;
 }
 
 .container nav #tabs li {
@@ -70,7 +71,21 @@
     border-width: 100%;
 }
 
+.container nav #tabs .close-menu {
+    position: absolute;
+    bottom: 0px;
+    background: rgb(247, 42, 42);
+    color: white;
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+}
+
 #menu-btn {
+    display: none;
     position: relative;
     top: 20px;
     right: 20px;
@@ -121,12 +136,12 @@
     margin: 15px 0px 30px;
 }
 
-.col-1 #dot-btns {
+.col-1 #col1-dot-btns {
     position: absolute;
     bottom: 30px;
 }
 
-.col-1 #dot-btns li {
+.col-1 #col1-dot-btns li {
     list-style: none;
     width: 15px;
     height: 15px;
@@ -137,12 +152,41 @@
     cursor: pointer;
 }
 
-.col-1 #dot-btns .active {
+.col-1 #col1-dot-btns .active1 {
     background: black;
+}
+
+.col-2 {
+    height: 490px;
 }
 
 .col-2 img {
     width: 100%;
+    height: 100%;
+}
+
+.col-2 #col2-dot-btns {
+    position: absolute;
+    left: 35%;
+    bottom: 50px;
+    display: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.col-2 #col2-dot-btns li {
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: grey;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.col-2 #col2-dot-btns .active2 {
+    background: black;
 }
 
 button {
@@ -175,5 +219,70 @@ button:hover {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        left: 0px;
+    }
+    .logo h1 {
+        font-size: 22px;
+    }
+    .logo p {
+        font-size: 14px;
+    }
+    .container nav #tabs {
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        width: 0%;
+        height: 250px;
+        display: block;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 2;
+        transition: width 0.5s;
+    }
+    .container nav #tabs li a {
+        color: white;
+    }
+    .container nav #tabs .close-menu {
+        display: none;
+    }
+    .logo .bar {
+        width: 48px;
+    }
+    .logo:hover .bar {
+        width: 170px;
+    }
+    #menu-btn {
+        display: block;
+        width: 35px;
+        right: 10px;
+    }
+    #menu-btn:hover {
+        width: 30px;
+    }
+    .row {
+        display: block;
+        overflow: hidden;
+        border-radius: 0px;
+    }
+    .col-1 {
+        height: 300px;
+    }
+    .col-1 h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .col-2 {
+        height: 100%;
+        margin-bottom: 100px;
+    }
+    .col-1 #col1-dot-btns {
+        display: none;
+    }
+    .col-2 #col2-dot-btns {
+        display: block;
     }
 }
